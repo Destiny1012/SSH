@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="user" namespace="/user" extends="json-default">
+		<action name="*" class="com.user.action.UserAction" method="{1}">
+			<result name="save">index.jsp</result>
+			<result name="delete">index.jsp</result>
+			<result name="update">index.jsp</result>
+			<result name="get">index.jsp</result>
+			<result name="goToSave">/WEB-INF/jsp/save.jsp</result>
+			<result name="goToDelete">/WEB-INF/jsp/delete.jsp</result>
+			<result name="goToUpdate">/WEB-INF/jsp/update.jsp</result>
+			<result name="goToGet">/WEB-INF/jsp/get.jsp</result>
+		</action>
+	</package>
+	 
+</struts>
